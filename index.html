@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rhena Shane Valinte Debut Invitation</title>
+
+  <!-- GOOGLE FONTS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Poppins:wght@300;500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- GOLD PARTICLES -->
+  <div class="bg-glow glow1"></div>
+  <div class="bg-glow glow2"></div>
+
+  <!-- ENTRY SCREEN -->
+  <div id="entryScreen">
+
+    <div class="overlay"></div>
+
+    <div class="entry-content">
+      <p class="mini-title">18th Debut Celebration</p>
+
+      <h1>
+        Rhena Shane <br>
+        <span>Valinte</span>
+      </h1>
+
+      <div class="gold-line"></div>
+
+      <p class="motif">
+        ✨ Motif: Wine Red & Gold ✨
+      </p>
+
+      <input
+        type="text"
+        id="nameInput"
+        placeholder="Enter your full name and press Enter"
+      >
+
+      <p id="errorMsg">
+        ❌ You are not on the guest list.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="mainContent">
+
+    <!-- HEADER -->
+    <header>
+
+      <div class="header-overlay"></div>
+
+      <div class="hero-content">
+
+        <p class="hero-top">
+          MAY 16, 2026
+        </p>
+
+        <h1>
+          You're Invited
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p id="welcomeMsg"></p>
+
+        <div id="roleMessage"></div>
+
+        <div id="birthdayMessage"></div>
+
+      </div>
+
+    </header>
+
+    <!-- EVENT INFORMATION -->
+    <section class="event-info-section">
+
+      <div class="section-title">
+        <span>Elegant Celebration</span>
+        <h2>✨ A Special Celebration ✨</h2>
+      </div>
+
+      <div class="event-info-card">
+
+        <p class="event-message">
+          Come and witness the magical 18th birthday celebration of
+          <strong>Rhena Shane Valinte</strong>.
+          Join us for an unforgettable evening filled with love,
+          laughter, heartfelt messages, and cherished memories as she
+          begins a beautiful new chapter in her life.
+        </p>
+
+        <div class="event-details">
+
+          <div class="detail-box">
+            <div class="icon-circle">📅</div>
+            <h3>Date</h3>
+            <p>MAY 16, 2026</p>
+          </div>
+
+          <div class="detail-box">
+            <div class="icon-circle">🕔</div>
+            <h3>Time</h3>
+            <p>5:00 PM</p>
+          </div>
+
+          <div class="detail-box">
+            <div class="icon-circle">🎨</div>
+            <h3>Motif</h3>
+            <p>Wine Red & Gold</p>
+          </div>
+
+          <div class="detail-box venue-box">
+            <div class="icon-circle">📍</div>
+
+            <h3>Venue</h3>
+
+            <p>
+              Doors 8 &amp; 9, MSLand Complex,<br>
+              Matina, Davao City
+            </p>
+
+            <small>
+              (Fronting Toyota Matina, after MG Matina,
+              and same compound with Thai Boran and Davao Light)
+            </small>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 18 ROSES -->
+    <section>
+      <h2>🌹 18 Roses 🌹</h2>
+      <div class="grid" id="roses"></div>
+    </section>
+
+    <!-- 18 CANDLES -->
+    <section>
+      <h2>🕯️ 18 Candles 🕯️</h2>
+      <div class="grid" id="candles"></div>
+    </section>
+
+    <!-- 18 TREASURES -->
+    <section>
+      <h2>🎁 18 Treasures 🎁</h2>
+      <div class="grid" id="treasures"></div>
+    </section>
+
+  </div>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" src="music.mp3" loop></audio>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
