@@ -53,9 +53,10 @@ body{
     linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
     url("front page.jpg");
 
-  background-size:cover;
+  /* CHANGED SIZE HERE */
+  background-size:35%;
   background-repeat:no-repeat;
-  background-position:center center;
+  background-position:center;
 
   overflow:hidden;
 }
@@ -156,9 +157,10 @@ header{
     linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.7)),
     url("backpage.jpg");
 
-  background-size:cover;
+  /* CHANGED SIZE HERE */
+  background-size:35%;
   background-repeat:no-repeat;
-  background-position:center center;
+  background-position:center;
 
   overflow:hidden;
 }
@@ -704,7 +706,6 @@ section h2{
     z-index: 1000;
     cursor: pointer;
 }
-/* ADD TO THE BOTTOM OF STYLE.CSS */
 #enterBtn {
   display: block;
   margin: 20px auto 0;
