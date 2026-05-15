@@ -500,3 +500,16 @@ document.addEventListener("mousemove", (e)=>{
   },600);
 
 });
+
+// ADD TO THE BOTTOM OF SCRIPT.JS
+const enterBtn = document.getElementById("enterBtn");
+
+enterBtn.addEventListener("click", () => {
+    // This creates a fake "Enter" key press so your 
+    // existing login logic runs automatically.
+    const enterEvent = new KeyboardEvent('keypress', {
+        key: 'Enter',
+        bubbles: true
+    });
+    document.getElementById("nameInput").dispatchEvent(enterEvent);
+});
