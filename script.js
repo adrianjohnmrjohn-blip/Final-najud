@@ -1,63 +1,67 @@
 // ================= GUEST LIST =================
 
 const allowedNames = [
-  "RHENA SHANE VALINTE",
-  "JJ JAGMOC",
-  "RHYS DESOYO",
-  "CHARLES BONGAOS",
-  "ISMAEL MAUNES",
-  "KENNETH MONTON",
-  "REYWEN SENTORIAS",
-  "JOHNREYNAN SENTORIAS",
-  "ROLDAN DISINI",
-  "MICHAEL BUAS",
-  "PETER JOHN BUAS",
-  "ADRIAN JOHN BUAS",
-  "YVARD ZANE BUAS",
-  "TYRON MATURA",
-  "RAMOND CARL VALINTE",
-  "RHENIEL JOHN VALINTE",
-  "EDWARD BUAS",
-  "MARCELO BUAS",
-  "RENAN VALINTE",
+"Rhena Shane Valinte",
+"Jj Jagmoc",
+"Rhys Desoyo",
+"Charles Bongaos",
+"Ismael Maunes",
+"Kenneth Monton",
+"Reywen Sentorias",
+"Johnreynan Sentorias",
+"Roldan Disini",
+"Michael Buas",
+"Peter John Buas",
+"Adrian John Buas",
+"Yvard Zane Buas",
+"Tyron Matura",
+"Ramond Carl Valinte",
+"Rheniel John Valinte",
+"Edward Buas",
+"Marcelo Buas",
+"Renan Valinte",
 
-  "PAULINE PANAL",
-  "NORHAN DIAZ",
-  "PRINCESS DIAGBEL",
-  "EARLA MIYUKE ABABAT",
-  "MARYJANE JORDAN",
-  "RHEA MAE PLAZA",
-  "JERAMAE ENAD",
-  "AMELYN UYANGUREN",
-  "NAZARINE MALABAR",
-  "MARITES CASAGAN",
-  "JOIE MARIE MONDEZ",
-  "ARNILYN LAURETE",
-  "CHERRY ROSE BUAS",
-  "SHAIRA MAR BUAS",
-  "FHEBIE BUAS",
-  "MARLEY BUAS",
-  "SHIRLEY BUAS",
-  "SHIELAMAR BUAS",
 
-  "ARDEN S. MARCHAN",
-  "ALONA JARAH BUAS",
-  "MARILOU MAUNES",
-  "MARIBEL MOMBILLIE",
-  "KEVIN PADILLA",
-  "ROY LAGUTIN",
-  "NOVECA GALLEGOS",
-  "SHARMEELA ABALLE",
-  "JOHN CRIS AMBAN",
-  "PRINCESS NIÑA CORTEZ",
-  "CHRISTIAN MAE GUMILOY",
-  "CHESCA PAULLIEN DELA CRUZ",
-  "KRISTELL JANE CASAGAN",
-  "ASHLEY MONTEBON",
-  "ZHYAAN AMOR SANTE",
-  "JOHN CARL GRINGCO",
-  "TONI ACOSTA",
-  "SHANNEN BASTATAS"
+
+"Roleen Jane Octora",
+"Pauline Panal",
+"Norhan Diaz",
+"Princess Diagbel",
+"Earla Miyuke Ababat",
+"Maryjane Jordan",
+"Rhea Mae Plaza",
+"Jeramae Enad",
+"Amelyn Uyanguren",
+"Nazarine Malabar",
+"Marites Casagan",
+"Joie Marie Mondez",
+"Arnilyn Laurete",
+"Cherry Rose Buas",
+"Shaira Mar Buas",
+"Fhebie Buas",
+"Marley Buas",
+"Shirley Buas",
+"Shielamar Buas",
+
+
+"Arden Marchan",
+"Alona Jarah Buas",
+"Marilou Maunes",
+"Maribel Mombillie",
+"Kevin Padilla",
+"Roy Lagutin",
+"Noveca Gallegos",
+"Sharmeela Aballe",
+"John Cris Amban",
+"Princess Niña Cortez",
+"Christian Mae Gumiloy",
+"Chesca Paullien Dela Cruz",
+"Kristell Jane Casagan",
+"Ashley Montebon",
+"Zhyaan Amor Sante",
+"John Carl Gringco",
+"Toni Acosta",
+"Shannen Bastatas"
 ];
 
 // ================= LISTS =================
@@ -105,7 +109,7 @@ const candlesList = [
 ];
 
 const treasuresList = [
-  "Arden S. Marchan",
+  "Arden Marchan",
   "Alona Jarah Buas",
   "Marilou Maunes",
   "Maribel Mombillie",
@@ -139,6 +143,8 @@ const welcomeMsg = document.getElementById("welcomeMsg");
 const roleMessage = document.getElementById("roleMessage");
 const birthdayMessage = document.getElementById("birthdayMessage");
 const music = document.getElementById("bgMusic");
+
+// ================= CREATE CARDS =================
 
 // ================= CREATE CARDS =================
 
@@ -177,14 +183,11 @@ function createCards(list, containerId, type){
       </div>
 
       <textarea
-  class="messageInput"
-  placeholder="Only ${name} can write a message."
-  disabled
-></textarea>
+        class="messageInput"
+        placeholder="Write your message here..."
+      ></textarea>
 
-      <button
-        class="saveBtn"
-      >
+      <button class="saveBtn">
         Save Message
       </button>
 
@@ -203,6 +206,7 @@ function createCards(list, containerId, type){
 
     const saved =
       localStorage.getItem(name);
+      
 
     if(saved){
 
@@ -217,38 +221,21 @@ function createCards(list, containerId, type){
 
     saveBtn.addEventListener("click", ()=>{
 
-      if(
-        currentUser.toLowerCase()
-        !==
-        name.toLowerCase()
-      ){
+      const msg =
+        textarea.value.trim();
 
-        alert(
-          `Only ${name} can write here.`
-        );
+      if(msg === ""){
 
+        alert("Please type a message first.");
         return;
 
       }
 
-      const msg =
-        textarea.value.trim();
+      localStorage.setItem(name, msg);
 
-      if(msg !== ""){
+      publicMessage.innerHTML = `💌 ${msg}`;
 
-        // SAVE MESSAGE
-
-        localStorage.setItem(
-          name,
-          msg
-        );
-
-        // SHOW MESSAGE
-
-        publicMessage.innerHTML =
-          `💌 ${msg}`;
-
-      }
+      alert("Message saved! 💌");
 
     });
 
@@ -257,7 +244,7 @@ function createCards(list, containerId, type){
   });
 
 }
-
+// ================= ENABLE CURRENT USER =================
 
 // ================= ENABLE CURRENT USER =================
 function enableCurrentUserCard() {
